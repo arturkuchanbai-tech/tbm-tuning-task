@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: tbm-tuning-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tbm_user
+      POSTGRES_PASSWORD: tbm_password
+      POSTGRES_DB: tbm_tuning
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

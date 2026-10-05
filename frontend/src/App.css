@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e9ef;
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: 0 0 5px;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 0;
+  color: #737b8c;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4c566a;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(20, 30, 50, 0.04);
+}
+
+.panel-header {
+  margin-bottom: 22px;
+}
+
+.panel-header h2 {
+  margin: 0 0 6px;
+  font-size: 21px;
+}
+
+.panel-header p {
+  margin: 0;
+  color: #7a8291;
+}
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.user-card {
+  border: 1px solid #e1e5ec;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  transition: 0.15s;
+}
+
+.user-card:hover {
+  border-color: #8d98ad;
+}
+
+.user-card.selected {
+  border-color: #2563eb;
+  background: #f5f8ff;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e8eefc;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.user-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-info strong {
+  font-size: 16px;
+}
+
+.user-info span {
+  color: #8a92a1;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.voucher-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.voucher-card {
+  border: 1px solid #e4e7ed;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.voucher-icon {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.voucher-content h3 {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f6f7fa;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.quantity span {
+  color: #777f8f;
+}
+
+.quantity strong {
+  font-size: 22px;
+}
+
+.primary-button,
+.secondary-button {
+  width: 100%;
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 14px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.primary-button:disabled {
+  background: #b7bfce;
+  cursor: not-allowed;
+}
+
+.update-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.update-row input {
+  width: 90px;
+  border: 1px solid #d9dee7;
+  border-radius: 9px;
+  padding: 10px;
+  outline: none;
+}
+
+.update-row input:focus {
+  border-color: #2563eb;
+}
+
+.secondary-button {
+  background: #eef1f6;
+  color: #30394a;
+}
+
+.secondary-button:hover {
+  background: #e3e7ef;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.history-item:last-child {
+  border-bottom: 0;
+}
+
+.history-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.history-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-info span {
+  color: #858d9d;
+  font-size: 13px;
+}
+
+.alert {
+  padding: 13px 16px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.alert.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+.empty {
+  padding: 30px;
+  text-align: center;
+  color: #858d9d;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .users,
+  .voucher-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 20px 24px;
+  }
+}
